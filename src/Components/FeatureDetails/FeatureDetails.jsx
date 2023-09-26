@@ -10,7 +10,7 @@ const FeatureDetails = () => {
     const {title, image, description, amount, text_color} = feature
 
     const handleDonation = () => {
-        saveDonation(id)
+        saveDonation(parseInt(id))
         toast.success('Donation Successful')
     }
      
