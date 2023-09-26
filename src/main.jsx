@@ -4,7 +4,6 @@ import './index.css'
 import {
   createBrowserRouter,
   RouterProvider,
-  useParams,
 } from "react-router-dom";
 import Root from './Components/Root/Root';
 import ErrorPage from './Components/ErrorPage/ErrorPage';
@@ -30,7 +29,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/statistics",
-        element: <Statistics></Statistics>
+        element: <Statistics></Statistics>,
+        loader: () => fetch('/features.json')
       },
       {
         path: "/feature/:id",

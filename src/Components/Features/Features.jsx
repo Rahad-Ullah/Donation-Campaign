@@ -11,7 +11,7 @@ const Features = () => {
     }, [])
  
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 my-24">
             {
                 features.map(feature => <Feature key={feature.id} feature={feature}></Feature>)
             }
