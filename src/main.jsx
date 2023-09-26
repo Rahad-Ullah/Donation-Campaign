@@ -4,12 +4,14 @@ import './index.css'
 import {
   createBrowserRouter,
   RouterProvider,
+  useParams,
 } from "react-router-dom";
 import Root from './Components/Root/Root';
 import ErrorPage from './Components/ErrorPage/ErrorPage';
 import Home from './Components/Home/Home';
 import Donation from './Components/Donation/Donation';
 import Statistics from './Components/Statistics/Statistics';
+import FeatureDetails from './Components/FeatureDetails/FeatureDetails';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +31,11 @@ const router = createBrowserRouter([
         path: "/statistics",
         element: <Statistics></Statistics>
       },
+      {
+        path: "/feature/:id",
+        element: <FeatureDetails></FeatureDetails>,
+        loader: () => fetch('../features.json')
+      }
     ]
   },
 ]);
