@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from "../../assets/Logo.png"
+import logo from "../../assets/Logo.png";
 
 const Header = () => {
     const links = <>
@@ -10,7 +10,7 @@ const Header = () => {
     return (
         <div>
             <div className="navbar bg-base-100 py-5 md:py-10 xl:py-16">
-                <div className="navbar-start">
+                <div className="navbar-start w-full flex justify-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -19,8 +19,8 @@ const Header = () => {
                             {links}
                         </ul>
                     </div>
-                    <div className="">
-                        <Link to={'/'}><img src={logo} alt="logo" className="w-4/5" /></Link>
+                    <div className="flex justify-center">
+                        <Link to={'/'} ><img src={logo} alt="logo" className="w-8/12 md:w-4/5" /></Link>
                     </div>
                 </div>
                 <div className="navbar-end hidden lg:flex">
